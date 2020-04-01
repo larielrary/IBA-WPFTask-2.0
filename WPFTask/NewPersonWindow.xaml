@@ -1,0 +1,59 @@
+﻿<Window x:Class="WPFTask.NewPersonWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFTask"
+        mc:Ignorable="d"
+        Title="NewPersonWindow" Height="397.761" Width="310.075" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="8" />
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="8" />
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStopCollection>
+                    <GradientStop Offset="0.2" Color="#355C7D"></GradientStop>
+                    <GradientStop Offset="0.4" Color="#6C5B7B"></GradientStop>
+                    <GradientStop Offset="1" Color="#C06C84"></GradientStop>
+                </GradientStopCollection>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="39*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Date" />
+        <TextBlock Text="First name" Grid.Row="1" />
+        <TextBlock Text="Last name" Grid.Row="2" />
+        <TextBlock Text="Surname" Grid.Row="3"/>
+        <TextBlock Text="City" Grid.Row="4" />
+        <TextBlock Text="Country" Grid.Row="5" />
+
+        <TextBox Text="{Binding Date}" Grid.Column="1" Margin="8,8,8,20" />
+        <TextBox Text="{Binding FirstName}" Grid.Column="1" Grid.Row="1" Margin="8,8,8,20" />
+        <TextBox Text="{Binding LastName}" Grid.Column="1" Grid.Row="2" Margin="8,8,8,20" />
+        <TextBox Text="{Binding Surname}" Grid.Column="1" Grid.Row="3" Margin="8,8,8,20" />
+        <TextBox Text="{Binding City}" Grid.Column="1" Grid.Row="4" Margin="8,8,8, 20" />
+        <TextBox Text="{Binding Country}" Grid.Column="1" Grid.Row="5" Margin="8,8,8,20" />
+
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal" Grid.Row="6" Grid.Column="1" Margin="24,0,26,0" Width="142">
+            <Button IsDefault="True" Click="Accept_Click" MinWidth="60" Margin="5,15,5,10">OK</Button>
+            <Button IsCancel="True" MinWidth="60" Margin="5,15,5,10" Content="Отмена"/>
+        </StackPanel>
+    </Grid>
+</Window>
