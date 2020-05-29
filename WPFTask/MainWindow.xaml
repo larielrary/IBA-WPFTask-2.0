@@ -69,7 +69,7 @@
         </Button>
         <Button x:Name="OpenFile" Click="OpenFile_Click" MinWidth="60" Margin="11,16,37,112" Grid.Row="7" Grid.Column="1">
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Open CSV file" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="7,0,0,0"/>
+                <TextBlock Text="Load data" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="7,0,0,0"/>
             </StackPanel>
         </Button>
         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,13,37,37" Height="46" Grid.Row="8" Grid.Column="1">

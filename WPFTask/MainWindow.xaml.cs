@@ -16,7 +16,9 @@ namespace WPFTask
         {
             InitializeComponent();
             DataContext = new ApplicationViewModel(this, dialogService, fileService);
+
         }
+
         private void Export_Click(object sender, RoutedEventArgs e)
         {
             Export exportWindow = new Export(this);
@@ -32,10 +34,12 @@ namespace WPFTask
         {
             await RunReport();
         }
+
         private async Task RunReport()
         {
+            //peopleList.Items.Clear();
             ApplicationViewModel applicationViewModel = new ApplicationViewModel(this, dialogService, fileService);
-            await Task.Run(() => applicationViewModel.ReadCSVAsync());
+            await applicationViewModel.ReadCSVAsync();
         }
     }
 }

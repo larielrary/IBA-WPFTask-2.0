@@ -78,14 +78,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="DefaultDialogService.cs" />
-    <Compile Include="IDialogService.cs" />
-    <Compile Include="IFileService.cs" />
-    <Compile Include="JsonFileService.cs" />
+    <Compile Include="Services\DefaultDialogService.cs" />
+    <Compile Include="Interfaces\IDialogService.cs" />
+    <Compile Include="Interfaces\IFileService.cs" />
+    <Compile Include="Services\JsonFileService.cs" />
     <Compile Include="NewPersonWindow.xaml.cs">
       <DependentUpon>NewPersonWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RelayCommand.cs" />
+    <Compile Include="Services\RelayCommand.cs" />
     <Page Include="Export.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -112,8 +112,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyDbContext.cs" />
-    <Compile Include="Person.cs" />
+    <Compile Include="Data\MyDbContext.cs" />
+    <Compile Include="Data\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

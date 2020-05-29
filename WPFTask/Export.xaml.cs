@@ -13,10 +13,12 @@ namespace WPFTask
     public partial class Export : Window
     {
         private MainWindow _mainWindow;
+        
         public Export()
         { 
             InitializeComponent();
         }
+        
         public Export(MainWindow mainWindow)
         {
             InitializeComponent();
@@ -25,6 +27,7 @@ namespace WPFTask
         /// <summary>
         ///selection of data for export
         /// </summary>
+        
         public List<string[]> SelectData()    
         {
             string[] tempData = new string[6];
@@ -63,6 +66,7 @@ namespace WPFTask
             }
             return toExport;
         }
+        
         /// <summary>
         /// get list of people from _mainWindow listBox
         /// </summary>
@@ -73,7 +77,7 @@ namespace WPFTask
             foreach (Person item in _mainWindow.peopleList.Items)
             {
                 tempArray[0] = item.id.ToString();
-                tempArray[1] = item.date;
+                tempArray[1] = item.date.ToString();
                 tempArray[2] = item.firstName;
                 tempArray[3] = item.lastName;
                 tempArray[4] = item.surname;
@@ -83,6 +87,7 @@ namespace WPFTask
             }
             return personList;
         }
+        
         private void ExportToXML_Click(object sender, RoutedEventArgs e)
         {
             List<string[]> toExport;
@@ -92,6 +97,7 @@ namespace WPFTask
                 ListToXML(toExport); 
             }
         }
+        
         /// <summary>
         ///export to xml
         /// </summary>
@@ -119,6 +125,7 @@ namespace WPFTask
             progressBar.Value++;
             xEle.Save("People.xml");
         }
+        
         private void ExportToExcel_Click(object sender, RoutedEventArgs e)
         {
             List<string[]> toExport;
@@ -128,6 +135,7 @@ namespace WPFTask
                 ListToExcel(toExport);
             }
         }
+        
         /// <summary>
         ///export to Excel
         /// </summary>
